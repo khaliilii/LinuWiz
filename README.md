@@ -1,5 +1,4 @@
-# FSSI
-Fast Setup Script Installation
+
 #  FSSI!
 Fast Setup Script Installation
 
