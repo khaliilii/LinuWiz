@@ -47,7 +47,7 @@ a harder way
 ```command
 $ sudo ./install.sh
 ```
-## List of Software and madules
+## List of Software and modules
 php apache2 php-fpm php-mbstring pwgen 
 
 php8.1 libapache2-mod-php8.1 php8.1-mysql php8.1-cgi php8.1-curl php8.1-gd php8.1-bcmath php8.1-ldap php8.1-mbstring php8.1-xml php8.1-soap php8.1-xsl php8.1-zip php8.1-pgsql php8.1-mysql php8.1-sqlite3 php8.1-redis php8.1-interbase php8.1-interbase php8.1-imagick php8.1-imap php8.1-intl php8.1-intl php8.1-common php8.1-odbc php8.1-sybase libapache2-mod
