@@ -49,7 +49,7 @@ $ sudo ./install.sh
 ```
 Another way to run is by saving reports
 ```command
-sudo ./install.sh | tee -a output.txt
+$ sudo ./install.sh | tee -a output.txt
 ```
 ## List of Software and modules
 php apache2 php-fpm php-mbstring pwgen 
