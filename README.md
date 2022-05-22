@@ -110,12 +110,17 @@ kubeadm kubelet kubectl kubeadm kubelet kubectl install apt-transport-https ca-c
 
 ## SET ‌Best Auto Config MYSQL And PHPMYADMIN
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
-
+ phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB. Frequently used operations (managing databases, tables, columns, relations, indexes, users, permissions, etc) can be performed via the user interface, while you still have the ability to directly execute any SQL statement. 
+ 
 ## SET ‌Best Auto Config PostgreSQL And PHPPGADMIN
+PostgreSQL is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads. The origins of PostgreSQL date back to 1986 as part of the POSTGRES project at the University of California at Berkeley and has more than 30 years of active development on the core platform.
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+PostgreSQL has earned a strong reputation for its proven architecture, reliability, data integrity, robust feature set, extensibility, and the dedication of the open source community behind the software to consistently deliver performant and innovative solutions. PostgreSQL runs on all major operating systems, has been ACID-compliant since 2001, and has powerful add-ons such as the popular PostGIS geospatial database extender. It is no surprise that PostgreSQL has become the open source relational database of choice for many people and organisations.
+
+Getting started with using PostgreSQL has never been easier - pick a project you want to build, and let PostgreSQL safely and robustly store your data.
+
+phpPgAdmin is a web-based tool to help manage PostgreSQL databases using an PHP frontend. 
 
 ## Install Gitea And Auto Config 
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+ Gitea is a community managed lightweight code hosting solution written in Go. It is published under the MIT license. 
