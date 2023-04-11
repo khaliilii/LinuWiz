@@ -96,6 +96,36 @@ then
 	sudo apt -y install php-fpm;
 	sudo apt-get -y install php-mbstring;	
 	sudo apt -y install pwgen;
+	##########php 8.2-extensions#########
+	sudo apt-get -y install php8.2;
+	sudo apt-get -y install libapache2-mod-php8.2;
+	sudo apt-get -y install php8.2-mysql;
+	sudo apt-get -y install php8.2-cgi;
+	sudo apt-get -y install php8.2-curl;
+	sudo apt-get -y install php8.2-gd;
+	sudo apt-get -y install php8.2-bcmath;
+	sudo apt-get -y install php8.2-cgi;
+	sudo apt-get -y install php8.2-ldap;
+	sudo apt-get -y install php8.2-mbstring;
+	sudo apt-get -y install php8.2-xml;
+	sudo apt-get -y install php8.2-soap;
+	sudo apt-get -y install php8.2-xsl;
+	sudo apt-get -y install php8.2-zip;
+	sudo apt-get -y install php8.2-pgsql;
+	sudo apt-get -y install php8.2-mysql;
+	sudo apt-get -y install php8.2-sqlite3;
+	sudo apt-get -y install php8.2-redis;
+	sudo apt-get -y install php8.2-interbase;
+	sudo apt-get -y install php8.2-imagick;
+	sudo apt-get -y install php8.2-imap;
+	sudo apt-get -y install php8.2-intl;
+	sudo apt-get -y install php8.2-xmlrpc;
+	sudo apt-get -y install php8.2-common;
+	sudo apt-get -y install php8.2-odbc;
+	sudo apt-get -y install php8.2-sybase;
+	sudo apt-get -y install php8.2-mongodb;
+	sudo apt-get -y install libapache2-mod;
+	sudo apt -y install php8.2-bcmath;
 	##########php 8.1-extensions#########
 	sudo apt-get -y install php8.1;
 	sudo apt-get -y install libapache2-mod-php8.1;
