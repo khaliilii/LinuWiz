@@ -96,6 +96,36 @@ then
 	sudo apt -y install php-fpm;
 	sudo apt-get -y install php-mbstring;	
 	sudo apt -y install pwgen;
+ 	##########php 8.3-extensions#########
+	sudo apt-get -y install php8.3;
+	sudo apt-get -y install libapache2-mod-php8.3;
+	sudo apt-get -y install php8.3-mysql;
+	sudo apt-get -y install php8.3-cgi;
+	sudo apt-get -y install php8.3-curl;
+	sudo apt-get -y install php8.3-gd;
+	sudo apt-get -y install php8.3-bcmath;
+	sudo apt-get -y install php8.3-cgi;
+	sudo apt-get -y install php8.3-ldap;
+	sudo apt-get -y install php8.3-mbstring;
+	sudo apt-get -y install php8.3-xml;
+	sudo apt-get -y install php8.3-soap;
+	sudo apt-get -y install php8.3-xsl;
+	sudo apt-get -y install php8.3-zip;
+	sudo apt-get -y install php8.3-pgsql;
+	sudo apt-get -y install php8.3-mysql;
+	sudo apt-get -y install php8.3-sqlite3;
+	sudo apt-get -y install php8.3-redis;
+	sudo apt-get -y install php8.3-interbase;
+	sudo apt-get -y install php8.3-imagick;
+	sudo apt-get -y install php8.3-imap;
+	sudo apt-get -y install php8.3-intl;
+	sudo apt-get -y install php8.3-xmlrpc;
+	sudo apt-get -y install php8.3-common;
+	sudo apt-get -y install php8.3-odbc;
+	sudo apt-get -y install php8.3-sybase;
+	sudo apt-get -y install php8.3-mongodb;
+	sudo apt-get -y install libapache2-mod;
+	sudo apt -y install php8.3-bcmath;
 	##########php 8.2-extensions#########
 	sudo apt-get -y install php8.2;
 	sudo apt-get -y install libapache2-mod-php8.2;
