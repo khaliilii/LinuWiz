@@ -17,28 +17,9 @@ The FSSI is a simple solution for installing programs and configuring tools in t
 This script automatically installs and executes packages and settings suitable for your distribution by automatically detecting your Linux distribution.
 
 ## Manual
+
 ### step1
-Edit lines 8 and 9 [install.sh](https://github.com/khaliilii/FSSI/blob/main/install.sh "install.sh") to add the system username and password
-```command
-ROOT=root;
-RootPASS=*******;
-```
-### step2
-Edit lines 10 and 11 [install.sh](https://github.com/khaliilii/FSSI/blob/main/install.sh "install.sh") to add the MySQL username and password
-```command
-MYSQLUSERNAME=mysqlusername;
-MYSQLPASS=*******;
-HOST=*;
-```
-### step3
-Edit lines 13 and 14 [install.sh](https://github.com/khaliilii/FSSI/blob/main/install.sh "install.sh") to add the PostgreSQL username and password
-```command
-POSTGRESPASS=*****;
-POSTGRESUSERNAME=postgresusername;
-```
-### step4
-The best way to run scripts is to use commands
-```command
+run install file:
 $ sudo su
 $ ./install.sh
 ```
