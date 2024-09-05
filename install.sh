@@ -1,6 +1,6 @@
 #!/bin/bash
 # ******************************************
-# Program: Fast Setup Script Installation: FSSI
+# Program: Linux wizard installation app: FSSI
 # Developer: Mohsen Khalili
 # Date: 01-may-2022
 # Last Updated: 21-may-2022
