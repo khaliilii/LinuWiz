@@ -13,7 +13,7 @@ Linux Wizard Fast Setup Script Installation
 [![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
 
 # Description
-The FSSI is a simple solution for installing programs and configuring tools in the  **short time!**
+The LinuWiz is a simple solution for installing programs and configuring tools in the  **short time!**
 This script automatically installs and executes packages and settings suitable for your distribution by automatically detecting your Linux distribution.
 
 ## Manual
