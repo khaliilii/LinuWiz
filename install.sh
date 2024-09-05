@@ -574,7 +574,7 @@ then
 	sudo apt-get -y install mysql-server mysql-client libmysqld-dev;
 	sudo snap install mysql-shell;
 	sudo apt-get -y install phpmyadmin;
-	#######php myadmin#####
+	#######phpmyadmin#####
 	sudo echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf;
 	sudo /etc/init.d/apache2 restart;
 	sudo mysql -u $ROOT -p"$ROOTPASS" -e "CREATE USER '$MYSQLUSERNAME'@'$HOST' IDENTIFIED WITH mysql_native_password BY '$MYSQLPASS';GRANT ALL PRIVILEGES ON *.* TO '$MYSQLUSERNAME'@'$HOST';FLUSH PRIVILEGES;UPDATE mysql.user SET Grant_priv = 'Y' WHERE user.Host = '*' AND user.User = '$MYSQLUSERNAME'";
