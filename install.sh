@@ -5,27 +5,21 @@
 # Date: 01-may-2022
 # Last Updated: 21-may-2022
 # ******************************************
-echo "please enter ROOT user:";
+
 #ROOT=root;
-read ROOT;
-echo "please enter ROOT password:";
+read "please enter ROOT user: " ROOT;
 #RootPASS=*******;
-read RootPASS;
-echo "please enter ROOT password:";
+read -p "please enter ROOT password: " RootPASS;
 #MYSQLUSERNAME=mysqlusername;
-read MYSQLUSERNAME;
-echo "please enter mysql password:";
+read -p "please enter ROOT password: " MYSQLUSERNAME;
 #MYSQLPASS=*******;
-read MYSQLPASS;
-echo "please enter mysql HOST:";
+read -p "please enter mysql password: " MYSQLPASS;
 #HOST=*;
-read HOST;
-echo "please enter POSTGRES PASS:";
+read -p "please enter mysql HOST: " HOST;
 #POSTGRESPASS=postgres;
-read POSTGRESPASS;
-echo "please enter POSTGRES USERNAME:";
+read -p "please enter POSTGRES PASS: " POSTGRESPASS;
 #POSTGRESUSERNAME=********;
-read POSTGRESUSERNAME;
+read -p "please enter POSTGRES USERNAME: " POSTGRESUSERNAME;
 array=( php apache2 php-fpm php-mbstring pwgen 
 
 php8.1 libapache2-mod-php8.1 php8.1-mysql php8.1-cgi php8.1-curl php8.1-gd php8.1-bcmath php8.1-ldap php8.1-mbstring php8.1-xml php8.1-soap php8.1-xsl php8.1-zip php8.1-pgsql php8.1-mysql php8.1-sqlite3 php8.1-redis php8.1-interbase php8.1-interbase php8.1-imagick php8.1-imap php8.1-intl php8.1-intl php8.1-common php8.1-odbc php8.1-sybase libapache2-mod
