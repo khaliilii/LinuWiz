@@ -105,6 +105,12 @@ then
 	sudo apt -y install php-fpm;
 	sudo apt-get -y install php-mbstring;	
 	sudo apt -y install pwgen;
+ ## Save existing php package list to packages.txt file
+sudo dpkg -l | grep php | tee packages.txt
+
+# Add Ondrej's PPA
+sudo add-apt-repository ppa:ondrej/php -y; # Press enter when prompted.
+sudo apt update -y;
  	##########php 8.3-extensions#########
 	sudo apt-get -y install php8.3;
 	sudo apt-get -y install libapache2-mod-php8.3;
