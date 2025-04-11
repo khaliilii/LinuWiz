@@ -111,6 +111,36 @@ sudo dpkg -l | grep php | tee packages.txt
 # Add Ondrej's PPA
 sudo add-apt-repository ppa:ondrej/php -y; # Press enter when prompted.
 sudo apt update -y;
+##########php 8.4-extensions#########
+	sudo apt-get -y install php8.4;
+	sudo apt-get -y install libapache2-mod-php8.3;
+	sudo apt-get -y install php8.4-mysql;
+	sudo apt-get -y install php8.4-cgi;
+	sudo apt-get -y install php8.4-curl;
+	sudo apt-get -y install php8.4-gd;
+	sudo apt-get -y install php8.4-bcmath;
+	sudo apt-get -y install php8.4-cgi;
+	sudo apt-get -y install php8.4-ldap;
+	sudo apt-get -y install php8.4-mbstring;
+	sudo apt-get -y install php8.4-xml;
+	sudo apt-get -y install php8.4-soap;
+	sudo apt-get -y install php8.4-xsl;
+	sudo apt-get -y install php8.4-zip;
+	sudo apt-get -y install php8.4-pgsql;
+	sudo apt-get -y install php8.4-mysql;
+	sudo apt-get -y install php8.4-sqlite3;
+	sudo apt-get -y install php8.4-redis;
+	sudo apt-get -y install php8.4-interbase;
+	sudo apt-get -y install php8.4-imagick;
+	sudo apt-get -y install php8.4-imap;
+	sudo apt-get -y install php8.4-intl;
+	sudo apt-get -y install php8.4-xmlrpc;
+	sudo apt-get -y install php8.4-common;
+	sudo apt-get -y install php8.4-odbc;
+	sudo apt-get -y install php8.4-sybase;
+	sudo apt-get -y install php8.4-mongodb;
+	sudo apt-get -y install libapache2-mod;
+	sudo apt -y install php8.4-bcmath;
  	##########php 8.3-extensions#########
 	sudo apt-get -y install php8.3;
 	sudo apt-get -y install libapache2-mod-php8.3;
