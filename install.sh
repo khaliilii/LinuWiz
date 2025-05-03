@@ -556,10 +556,12 @@ sudo apt update -y;
 	sudo snap install openjdk;
 	sudo apt -y install default-jre;
 	sudo apt -y install default-jdk;
+ 	sudo apt -y install openjdk-8-jre-headless;
 	sudo apt -y install openjdk-11-jre-headless;
 	sudo apt -y install openjdk-17-jre-headless;  
 	sudo apt -y install openjdk-18-jre-headless;
-	sudo apt -y install openjdk-8-jre-headless;
+ 	sudo apt -y install openjdk-21-jre-headless;
+  	sudo apt -y install openjdk-24-jre-headless;
 	####composer####
 	sudo apt-get -y update;
 	sudo apt-get -y install composer;
