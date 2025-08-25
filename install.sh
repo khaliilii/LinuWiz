@@ -108,6 +108,12 @@ then
  ## Save existing php package list to packages.txt file
 sudo dpkg -l | grep php | tee packages.txt
 
+## install enable ssh server
+sudo apt -y install openssh-server;
+sudo systemctl enable ssh --now;
+sudo ufw allow ssh;
+
+
 # Add Ondrej's PPA
 sudo add-apt-repository ppa:ondrej/php -y; # Press enter when prompted.
 sudo apt update -y;
