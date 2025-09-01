@@ -3,17 +3,19 @@
 # Program: Linux wizard installation app: FSSI
 # Developer: Mohsen Khalili
 # Date: 01-may-2022
-# Last Updated: 21-may-2022
+# Last Updated: 21-may-202۵
 # ******************************************
 
 #ROOT=root;
-read "please enter ROOT user: " ROOT;
+read -p "Please enter ROOT user: " ROOT;
 #RootPASS=*******;
-read -s -p "please enter ROOT password: " RootPASS;
+read -s -p "Please enter ROOT password: " RootPASS;
+echo
 #MYSQLUSERNAME=mysqlusername;
-read -p "please enter mysql username: " MYSQLUSERNAME;
+read -p "Please enter MySQL username: " MYSQLUSERNAME;
 #MYSQLPASS=*******;
-read -s -p "please enter mysql password: " MYSQLPASS;
+read -s -p "Please enter MySQL password: " MYSQLPASS;
+echo
 #HOST=*;
 read -p "please enter mysql HOST: " HOST;
 #POSTGRESUSERNAME=********;
@@ -117,9 +119,46 @@ sudo ufw allow ssh;
 # Add Ondrej's PPA
 sudo add-apt-repository ppa:ondrej/php -y; # Press enter when prompted.
 sudo apt update -y;
+############install php#################
+php_versions=(8.5 8.4 8.3 8.2 8.1 8.0 7.4 7.3 7.2 7.1 7.0 5.6)
+
+for version in "${php_versions[@]}"; do
+    sudo apt-get -y install php$version libapache2-mod-php$version php$version-mysql php$version-curl php$version-gd php$version-bcmath php$version-mbstring php$version-xml php$version-soap php$version-zip php$version-pgsql php$version-redis php$version-imagick php$version-intl
+done
+
+##########php 8.5-extensions#########
+	sudo apt-get -y install php8.5;
+	sudo apt-get -y install libapache2-mod-php8.5;
+	sudo apt-get -y install php8.5-mysql;
+	sudo apt-get -y install php8.5-cgi;
+	sudo apt-get -y install php8.5-gd;
+	sudo apt-get -y install php8.5-bcmath;
+	sudo apt-get -y install php8.5-curl;
+	sudo apt-get -y install php8.4-cgi;
+	sudo apt-get -y install php8.5-ldap;
+	sudo apt-get -y install php8.5-mbstring;
+	sudo apt-get -y install php8.5-xml;
+	sudo apt-get -y install php8.5-soap;
+	sudo apt-get -y install php8.5-xsl;
+	sudo apt-get -y install php8.5-zip;
+	sudo apt-get -y install php8.5-pgsql;
+	sudo apt-get -y install php8.5-mysql;
+	sudo apt-get -y install php8.5-sqlite3;
+	sudo apt-get -y install php8.5-redis;
+	sudo apt-get -y install php8.5-interbase;
+	sudo apt-get -y install php8.5-imagick;
+	sudo apt-get -y install php8.5-imap;
+	sudo apt-get -y install php8.5-intl;
+	sudo apt-get -y install php8.5-xmlrpc;
+	sudo apt-get -y install php8.5-common;
+	sudo apt-get -y install php8.5-odbc;
+	sudo apt-get -y install php8.5-sybase;
+	sudo apt-get -y install php8.5-mongodb;
+	sudo apt-get -y install libapache2-mod;
+	sudo apt -y install php8.5-bcmath;
 ##########php 8.4-extensions#########
 	sudo apt-get -y install php8.4;
-	sudo apt-get -y install libapache2-mod-php8.3;
+	sudo apt-get -y install libapache2-mod-php8.4;
 	sudo apt-get -y install php8.4-mysql;
 	sudo apt-get -y install php8.4-cgi;
 	sudo apt-get -y install php8.4-curl;
@@ -489,6 +528,7 @@ sudo apt update -y;
 	sudo snap install redis-desktop-manager;
 	sudo snap install p3x-redis-ui;
 	####go####
+	sudo apt install -y go;
 	sudo snap install go --classic;
 	sudo snap install goreleaser --classic;
 	###IDE#####
@@ -618,6 +658,27 @@ sudo apt update -y;
 	sudo apt-get -y install mysql-server mysql-client libmysqld-dev;
 	sudo snap install mysql-shell;
 	sudo apt-get -y install phpmyadmin;
+	########################
+	#######pm2
+	set -e
+
+	echo "📦 Installing Node.js and npm...";
+	sudo apt install -y nodejs npm;
+
+	echo "✅ Node.js version:"
+	node -v
+	echo "✅ npm version:"
+	npm -v
+
+	echo "⚙️ Installing PM2 globally..."
+	sudo npm install -g pm2;
+
+	echo "🔄 Configuring PM2 startup..."
+	pm2 startup systemd -u $USER --hp $HOME
+	pm2 save
+
+	echo "🎉 PM2 installation completed!"
+	echo "👉 You can start your app with: pm2 start app.js"
 	#######phpmyadmin#####
 	sudo echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf;
 	sudo /etc/init.d/apache2 restart;
@@ -649,6 +710,45 @@ then
     sudo service httpd restart;
     sudo chkconfig httpd on;
     sudo chkconfig mysqld on;
+
+
+elif [ "`lsb_release -is`" == "opensuse*" ] || [ "`lsb_release -is`" == "sles" ]
+then
+	echo "📦 Installing packages for openSUSE...";
+    sudo zypper refresh;
+
+    # PHP
+    sudo zypper install -y php8 php8-cli php8-mysql php8-pgsql php8-xml php8-gd php8-mbstring php8-curl php8-zip;
+
+    # Databases
+    sudo zypper install -y mariadb postgresql redis mongodb;
+
+    # Tools
+    sudo zypper install -y nodejs npm git wget curl unzip htop;
+
+    # PM2
+    sudo npm install -g pm2;
+    pm2 startup systemd -u $USER --hp $HOME;
+    pm2 save;	
+
+elif [ "`lsb_release -is`" == "arch" ] || [ "`lsb_release -is`" == "arch" ]
+then
+	echo "📦 Installing packages for Arch Linux...";
+    sudo pacman -Syu --noconfirm;
+
+    # PHP
+    sudo pacman -S --noconfirm php php-apache php-pgsql php-sqlite php-gd php-intl;
+
+    # Databases
+    sudo pacman -S --noconfirm mariadb postgresql redis mongodb;
+
+    # Tools
+    sudo pacman -S --noconfirm nodejs npm git wget curl unzip htop;
+
+    # PM2
+    sudo npm install -g pm2;
+    pm2 startup systemd -u $USER --hp $HOME;
+    pm2 save;
 
 else
     echo "Unsupported Operating System";
